@@ -1,19 +1,22 @@
 # HACO: Human-AI Co-discovery system
 
 [![arXiv](https://img.shields.io/badge/arXiv-2606.22866-b31b1b.svg)](https://arxiv.org/abs/2606.22866)
-[![Blog](https://img.shields.io/badge/Blog-MaskGXT-blue.svg)](https://sungsoo-ahn.github.io/blog/2026/maskgxt-ai-coscientist/)
+[![Blog](https://img.shields.io/badge/Blog-HACO-blue.svg)](https://sungsoo-ahn.github.io/blog/2026/maskgxt-ai-coscientist/)
 
-An **AI co-scientist** for crystal structure prediction (CSP). It searches
-generative paradigms and architectures across fields, transfers a promising one
-into CSP, and refines it under sparse human guidance to discover new algorithms
-(e.g., [MaskGXT](https://github.com/kiyoung98/MaskGXT)).
+**HACO** (Human–AI Co-discovery) is an AI co-scientist that discovered a
+state-of-the-art algorithm for crystal structure prediction (CSP). The key idea is
+**co-discovery**: rather than fully automating research, HACO works together with a
+human expert. It searches generative paradigms and architectures across fields,
+transfers a promising one into CSP, and refines it under sparse human guidance to
+discover new algorithms (e.g.,
+[MaskGXT](https://github.com/kiyoung98/MaskGXT)). See the
+[blog post](https://sungsoo-ahn.github.io/blog/2026/maskgxt-ai-coscientist/) for the
+full story.
 
 Mechanically, it is an autonomous loop that searches for the best `train.py`,
-running indefinitely if no human intervenes.
-
-To intervene, a human steers the loop by injecting a prompt into the **Orchestrator**,
-the sole interface for human steering, which routes the intervention into the
-operator it dispatches. Interventions took two forms:
+running indefinitely if no human intervenes. To intervene, a human injects a prompt
+into the **Orchestrator**, the sole interface for human steering, which routes the
+intervention into the operator it dispatches. Interventions took two forms:
 
 - **Objective level** — give the agent a *new* goal it wasn't chasing, and let it
   figure out how (e.g., "recover sub-bin coordinate precision").
